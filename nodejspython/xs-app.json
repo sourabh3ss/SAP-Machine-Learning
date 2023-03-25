@@ -1,0 +1,9 @@
+{
+    "routes": [
+      {
+        "source": "^/edapython/(.*)$",
+        "target": "$1",
+        "destination": "edapython"
+      }
+    ]
+  }

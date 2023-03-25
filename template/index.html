@@ -1,0 +1,43 @@
+    <!DOCTYPE html>
+    <html lang="en" dir="ltr">
+    <head>
+        <meta charset="utf-8">
+        <title>Exploratory Data Analysis(EDA): CO2 Emission </title>
+      <style>
+  h1 {text-align: center;}
+  p {text-align: center;}
+  div {text-align: center;}
+  </style>
+    </head>
+      <body>
+      <div>
+      {% if result != None %}
+            <div class="caption">
+          <p class="text-center">Heat Map showing correlation between CO2,GDP and Population </p>
+        </div>
+        <img src="data:image/png;base64,{{ heat_map }}"  class="img-thumbnail" alt="Heat Map" style="width:600px;height:600px;" />
+      {% endif %}
+      {% if result != None %}
+            <div class="caption">
+          <p class="text-center">Box Plot</p>
+        </div>
+        <img src="data:image/png;base64,{{ boxplot }}" alt="Box Plot" style="width:600px;height:600px;" />
+
+      {% endif %}
+      {% if result != None %}
+            <div class="caption">
+          <p class="text-center">Scatter Plot Showing relation-ship between Population & CO2</p>
+        </div>
+        <img src="data:image/png;base64,{{ scat1 }}" alt="Scatter Plot" style="width:600px;height:600px;" />
+
+      {% endif %}
+      {% if result != None %}
+            <div class="caption">
+          <p class="text-center">Scatter Plot Showing relation-ship between Population & GDP</p>
+        </div>
+        <img src="data:image/png;base64,{{ scat2 }}"  alt="Scatter Plot" style="width:600px;height:600px;" />
+
+      {% endif %}
+        </div>
+      </body>
+    </html>
